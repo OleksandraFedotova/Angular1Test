@@ -1,0 +1,72 @@
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color:  #f1f1f1;
+            }
+            .sidenav {
+         background-color: white;
+         height: 100%;
+                border-left: solid 2px grey;
+                 border-right: solid 2px grey;
+                overflow-y: scroll;
+    }
+            .user-pre-info{
+                padding:15px;
+                cursor: pointer;
+               background-color: white;
+                border-bottom: solid 1px grey;
+                
+            }
+#firstName{
+    margin-left: 10px;
+}
+            .user-pre-info:hover{
+                background-color:  #ccffcc;
+            }
+            .user-pre-info img{
+                height: 40px;
+                width: 40px;
+            }
+            .col-sm-3{
+                padding-left: 0;
+                padding-right: 0;
+            } 
+            .title{
+                font-size:20px;
+                visibility: hidden;
+            }
+            .container-fluid{
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .active{
+                background-color: #c6ffb3;
+            }
+            .user-info{
+                font-size: 20px;
+                font-family:monospace;
+            }
+.name{
+    font-size: 40px;
+}
+.add-info{
+    margin-top: 40px;
+}
+.header{
+    width:100%;
+   border-bottom: solid 2px grey;
+}
+.name-info{
+    margin-top: 30px;
+}
+            .mainInfo{
+                margin-top: 30px;
+            } 
+            h3{
+                font-family: fantasy;
+            }
+        
