@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="userListApp">    
+    <head>
+         <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    </head>
+<body>
+<div ng-controller="UserListController" class="container-fluid">
+    <div class="col-sm-3 sidenav" id="users">
+              <div class="input-group">
+        <input type="text" class="form-control" ng-model="searchText" placeholder="Search User...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>    
+    <div ng-click="GetUserInfo($event,user)" class="user-pre-info" ng-repeat="user in users | filter: { general: {name: searchText} }">
+        <img  src="{{user.general.avatar}}"/>   
+      <span>{{user.general.name}}</span>
+        
+    </div>
+</div>
+    
+    <div class="col-sm-9">
+        <div class="header">
+    <h2 >Clients Detail</h2> 
+        </div>
+    <div class="mainInfo">
+        <img class="col-sm-2" src="{{UserModel.general.avatar}}"/>
+        <div class="col-sm-8 name-info">
+            <span class="user-info name" id="firstName">{{UserModel.general.firstName}}   </span>
+        <span class="user-info name">{{UserModel.general.lastName}}</span>
+            
+        </div>
+       <div class="col-md-10 add-info">
+           <h3 class="title">Contact</h3>
+            <span class="user-info">{{UserModel.contact.email}}</span>
+            <span class="user-info">{{UserModel.contact.phone}}</span>
+           <h3 class="title">Job</h3>
+            <span class="user-info">{{UserModel.job.company}}</span>
+           <span class="user-info">{{UserModel.job.title}}</span>
+           <h3 class="title">Address</h3>
+           <span class="user-info">{{UserModel.address.street}}</span>
+           <span class="user-info">{{UserModel.address.city}}</span>
+           <span class="user-info">{{UserModel.address.zipcode}}</span>
+           <span class="user-info">{{UserModel.address.country}}</span>
+        </div>
+        </div>
+    </div>
+	</div>
+    
+    </body>
+</html>
